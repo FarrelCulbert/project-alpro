@@ -1,0 +1,19 @@
+import random
+import string
+
+def random_string(lenght=32):
+    character_set = string.ascii_letters
+    return ''.join(random.choice(character_set)for i in range(lenght))
+    
+pengirim = input("Masukan nama pengirim : ")
+alamat_pengirim = input('Masukan alamat pengirim : ')
+penerima = input('Masukan nama penerima : ')
+alamat_penerima = input('Masukan alamat penerima')
+resi = random_string(5)
+
+print('==================')
+print('\t\t','CEPAT_','\b',resi)
+print(' PENGIRIM :',pengirim,'\n', alamat_pengirim)
+print('==================')
+print(' PENERIMA :',penerima,'\n', alamat_penerima)
+
