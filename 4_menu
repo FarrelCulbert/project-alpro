@@ -1,0 +1,114 @@
+import random
+import string
+
+def random_string_number(lenght=32):
+    character_set = string.ascii_letters + string.digits
+    return ''.join(random.choice(character_set)for i in range(lenght))
+    
+
+def output():
+    print('+===================================+')
+    print('\t\t','RESI_',resi)
+    print(' PENGIRIM :',pengirim,'\n', alamat_pengirim)
+    print('______________________')
+    print(' PENERIMA :',penerima,'\n', alamat_penerima)
+    print('______________________')
+    print('TOTAL BIAYA')
+    if tujuan == 'yogyakarta':
+        harga_yogyakarta = 15000
+        perhitungan_yogyakarta = harga_yogyakarta * beban
+        if beban <= 1:
+            print(perhitungan_yogyakarta)
+        elif beban <= 2:
+            print(perhitungan_yogyakarta)
+        elif beban <= 3:
+            print(perhitungan_yogyakarta)
+        elif beban <= 4:
+            print(perhitungan_yogyakarta)
+        elif beban <= 5:
+            print(perhitungan_yogyakarta)
+    elif tujuan == 'jakarta':
+        harga_jakarta = 15000
+        perhitungan_jakarta = harga_jakarta * beban
+        if beban <= 1:
+            print(perhitungan_jakarta)
+        elif beban <= 2:
+            print(perhitungan_jakarta)
+        elif beban <= 3:
+            print(perhitungan_jakarta)
+        elif beban <= 4:
+            print(perhitungan_jakarta)
+        elif beban <= 5:
+            print(perhitungan_jakarta)
+    elif tujuan == 'pontianak':
+        harga_pontianak = 45000
+        perhitungan_pontianak= harga_pontianak * beban
+        if beban <= 1:
+            print(perhitungan_pontianak)
+        elif beban <= 2:
+            print(perhitungan_pontianak)
+        elif beban <= 3:
+            print(perhitungan_pontianak)
+        elif beban <= 4:
+            print(perhitungan_pontianak)
+        elif beban <= 5:
+            print(perhitungan_pontianak)
+    elif tujuan == 'makassar':
+        harga_makassar = 40000
+        perhitungan_makassar = harga_makassar * beban
+        if beban <= 1:
+            print(perhitungan_makassar)
+        elif beban <= 2:
+            print(perhitungan_makassar)
+        elif beban <= 3:
+            print(perhitungan_makassar)
+        elif beban <= 4:
+            print(perhitungan_makassar)
+        elif beban <= 5:
+            print(perhitungan_makassar)
+    elif tujuan == 'flores':
+        harga_flores = 45000
+        perhitungan_flores = harga_flores * beban
+        if beban <= 1:
+            print(perhitungan_flores)
+        elif beban <= 2:
+            print(perhitungan_flores)
+        elif beban <= 3:
+            print(perhitungan_flores)
+        elif beban <= 4:
+            print(perhitungan_flores)
+        elif beban <= 5:
+            print(perhitungan_flores)
+    else:
+        print('maaf kota tujuan belum terjangkau')
+    print('berat',beban,'KG')
+    print('Qty :',qty,'pcs',',Barang :',isi_barang)
+    print('+===================================+')
+
+jawab = 'ya'
+while (True):
+    print ('=========SISTEM RESI=========')
+    print ('[1] Tambahkan resi')
+    print ('[2] Tampilkan resi')
+    print ('[3] Keluar')
+    kode = input("masukan kode : ")
+    if kode == '1':
+        print("=========Input Resi=========")
+        beban = int(input('beban (kg)\t\t: '))
+        tujuan = str(input('tujuan\t\t\t: '))
+        pengirim = input("Masukan nama pengirim\t: ")
+        alamat_pengirim = input('Masukan alamat pengirim : ')
+        penerima = input('Masukan nama penerima\t: ')
+        alamat_penerima = input('Masukan alamat penerima : ')
+        isi_barang= input('Masukan isi barang\t: ')
+        qty = input('Masukan jumlah barang\t: ')
+        resi = random_string_number(10)
+    elif kode == '2':
+        output()
+        continue
+    elif kode == '3':
+        jawab = input ('apakah ingin menghentikan sistem?(ya/tidak) : ')
+        if jawab == 'tidak':
+            True
+        elif jawab == 'ya':
+            break
